@@ -7,15 +7,21 @@ var path = require('path');
 var fs = require('fs');
 var url = require('url');
 var data = require('./data/data.json')
-    //编译压缩sass 
+var uglify = require('gulp-uglify');
+//编译压缩sass 
 gulp.task('sass', function() {
-    gulp.src('./src/scss/*.scss')
-        .pipe(sass())
-        .pipe(minCss())
-        .pipe(gulp.dest('./src/css'))
-})
-
-//监听sass
+        gulp.src('./src/scss/*.scss')
+            .pipe(sass())
+            .pipe(minCss())
+            .pipe(gulp.dest('./src/css'))
+    })
+    //压缩js
+gulp.task('uglify', function() {
+        gulp.src('./src/js/app/*.js')
+            .pipe(uglify())
+            .pipe(gulp.dest('./src/minjs'))
+    })
+    //监听sass
 gulp.task('watch', function() {
     gulp.watch('./src/scss/index.scss', ['sass'])
 })
@@ -43,4 +49,4 @@ gulp.task('server', ['sass'], function() {
 })
 
 //$
-gulp.task('default', ['sass', 'watch', 'server'])
+gulp.task('default', ['sass', 'watch', 'uglify', 'server'])
