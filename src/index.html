@@ -5,11 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + 'px'
+    </script>
     <title>Document</title>
 </head>
 
 <body>
+    <div class="wrap">
+        <header>必买大牌</header>
+        <div class="con">
+            <div class="list">
+                <dl>
+                    <dt><img src="./img/2.jpg" alt=""></dt>
+                    <dd>满300减70</dd>
+                </dl>
+                <dl>
+                    <dt><img src="./img/3.jpg" alt=""></dt>
+                    <dd>满300减70</dd>
+                </dl>
+                <dl>
+                    <dt><img src="./img/4.jpg" alt=""></dt>
+                    <dd>满300减70</dd>
+                </dl>
 
+            </div>
+            <div class="men">
+                <dl>
+                    <dt><img src="./img/3.jpg" alt=""></dt>
+                    <dd>满300减70</dd>
+                </dl>
+                <dl>
+                    <dt><img src="./img/4.jpg" alt=""></dt>
+                    <dd>满300减70</dd>
+                </dl>
+            </div>
+        </div>
+        <footer>
+            <dl>
+                <dt><i class="icon iconfont icon-wode"></i></dt>
+                <dd>主会场</dd>
+            </dl>
+            <dl>
+                <dt><i class="icon iconfont icon-wode"></i></dt>
+                <dd>全部会场</dd>
+            </dl>
+            <dl>
+                <dt><i class="icon iconfont icon-wode"></i></dt>
+                <dd>抢5折券</dd>
+            </dl>
+            <dl>
+                <dt><i class="icon iconfont icon-wode"></i></dt>
+                <dd>榜单会场</dd>
+            </dl>
+            <dl>
+                <dt><i class="icon iconfont icon-wode"></i></dt>
+                <dd>我的618</dd>
+            </dl>
+        </footer>
+    </div>
+    <script src="./js/libs/require.js"></script>
+    <script>
+        require(['./js/main.js'], function() {
+            require(['index'])
+        })
+    </script>
 </body>
 
 </html>
