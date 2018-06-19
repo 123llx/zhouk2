@@ -18,18 +18,11 @@
         <header>必买大牌</header>
         <div class="con">
             <div class="list">
-                <dl>
+                <!-- <dl>
                     <dt><img src="./img/2.jpg" alt=""></dt>
                     <dd>满300减70</dd>
-                </dl>
-                <dl>
-                    <dt><img src="./img/3.jpg" alt=""></dt>
-                    <dd>满300减70</dd>
-                </dl>
-                <dl>
-                    <dt><img src="./img/4.jpg" alt=""></dt>
-                    <dd>满300减70</dd>
-                </dl>
+                </dl> -->
+
 
             </div>
             <div class="men">
@@ -66,6 +59,15 @@
             </dl>
         </footer>
     </div>
+    <script id="tpl" type="text/x-handlebars-template">
+        {{#each this}}
+        <dl>
+            <!-- {{img}}  "img/img1.jpg"-->
+            <dt><img src="{{img}}" alt=""></dt>
+            <dd>{{title}}</dd>
+        </dl>
+        {{/each}}
+    </script>
     <script src="./js/libs/require.js"></script>
     <script>
         require(['./js/main.js'], function() {
